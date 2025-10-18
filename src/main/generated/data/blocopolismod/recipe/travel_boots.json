@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "P": {
+      "item": "blocopolismod:lead_ingot"
+    },
+    "S": {
+      "item": "blocopolismod:plume_de_pan"
+    }
+  },
+  "pattern": [
+    "S S",
+    "P P",
+    "   "
+  ],
+  "result": {
+    "count": 1,
+    "id": "blocopolismod:travel_boots"
+  }
+}

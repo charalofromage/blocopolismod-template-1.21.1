@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "blocopolismod:item/spawner_speed_upgrade"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "blocopolismod:silver_wall"
+  },
+  "result": {
+    "count": 1,
+    "id": "blocopolismod:silver_block"
+  }
+}

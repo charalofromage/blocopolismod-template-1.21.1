@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "S": {
+      "item": "blocopolismod:piece_of_blade_of_hades"
+    },
+    "T": {
+      "item": "blocopolismod:silver_stick"
+    }
+  },
+  "pattern": [
+    " SS",
+    " T ",
+    " T "
+  ],
+  "result": {
+    "count": 1,
+    "id": "blocopolismod:hades_weapon"
+  }
+}

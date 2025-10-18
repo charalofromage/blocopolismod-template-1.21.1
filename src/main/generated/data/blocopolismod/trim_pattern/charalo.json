@@ -1,0 +1,8 @@
+{
+  "asset_id": "blocopolismod:charalo",
+  "decal": false,
+  "description": {
+    "translate": "trim_pattern.blocopolismod.charalo"
+  },
+  "template_item": "blocopolismod:new_armor_trim_template"
+}

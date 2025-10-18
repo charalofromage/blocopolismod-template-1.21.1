@@ -1,0 +1,9 @@
+{
+  "asset_name": "lead",
+  "description": {
+    "color": "#6A7F8C",
+    "translate": "trim_material.blocopolismod.lead"
+  },
+  "ingredient": "blocopolismod:lead_ingot",
+  "item_model_index": 0.9
+}

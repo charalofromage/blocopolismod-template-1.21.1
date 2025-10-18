@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "blocopolismod:block/lead_slab"
+    },
+    "type=double": {
+      "model": "blocopolismod:block/lead_block"
+    },
+    "type=top": {
+      "model": "blocopolismod:block/lead_slab_top"
+    }
+  }
+}

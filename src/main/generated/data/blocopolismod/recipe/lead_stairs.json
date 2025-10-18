@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "S": {
+      "item": "blocopolismod:lead_block"
+    }
+  },
+  "pattern": [
+    "  S",
+    " SS",
+    "SSS"
+  ],
+  "result": {
+    "count": 4,
+    "id": "blocopolismod:lead_stairs"
+  }
+}

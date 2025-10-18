@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "blocopolismod:block/zombie_spawner"
+    }
+  }
+}

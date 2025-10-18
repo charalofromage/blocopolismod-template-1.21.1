@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "S": {
+      "item": "blocopolismod:silver_block"
+    }
+  },
+  "pattern": [
+    "SSS",
+    "SSS",
+    "   "
+  ],
+  "result": {
+    "count": 6,
+    "id": "blocopolismod:silver_wall"
+  }
+}

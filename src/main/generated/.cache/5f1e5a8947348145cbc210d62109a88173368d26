@@ -1,0 +1,15 @@
+// 1.21.1	2025-10-18T19:30:03.2072313	BlocopolisMod/Tags for minecraft:item
+9c35dff402aded07c09b82d66df3bb146ebf1ebc data\minecraft\tags\item\hoes.json
+b17ed940b472205cdd397b1289f6649c741c38a1 data\minecraft\tags\item\trimmable_armor.json
+929bf102f53a70464da6780fe99bd878f66deedb data\minecraft\tags\item\trim_materials.json
+28acaba52f195ddc7e7b0cf38339a4e2f744ebdf data\minecraft\tags\item\axes.json
+be4c7d40fa7abfe0f45d439c26f5f01004f277c6 data\minecraft\tags\item\shovels.json
+2d43cbaf707597035b378cff7c7ab2cf6eb6cf51 data\minecraft\tags\item\enchantable\head_armor.json
+35133e95f1c8fdd7a1c21afcc231fc0bffefb9a8 data\minecraft\tags\item\trim_templates.json
+0f985aa6460d2dac87bc09c1dbdd4d6132875130 data\minecraft\tags\item\enchantable\durability.json
+2098ba1ac9b3a864dfe587302f620d77e99b733f data\minecraft\tags\item\swords.json
+1b015659aa79f09e6920d04d8a1e991c2df9c8fa data\minecraft\tags\item\enchantable\armor.json
+3df5ee56b0c3e4c106052cf0e25a6fbf649e51c7 data\minecraft\tags\item\enchantable\leg_armor.json
+fa204f1bcce9063ed533d763663d308a89ce89eb data\minecraft\tags\item\enchantable\foot_armor.json
+b357f8352477f509513da0883c7d9428e62cd393 data\minecraft\tags\item\pickaxes.json
+054b81fc1b175c44d59f59ad746c7455a523ee43 data\minecraft\tags\item\enchantable\chest_armor.json

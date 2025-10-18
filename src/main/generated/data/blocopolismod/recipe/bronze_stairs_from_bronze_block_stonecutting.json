@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "blocopolismod:bronze_block"
+  },
+  "result": {
+    "count": 1,
+    "id": "blocopolismod:bronze_stairs"
+  }
+}

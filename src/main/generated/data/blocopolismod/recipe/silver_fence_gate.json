@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "S": {
+      "item": "blocopolismod:silver_stick"
+    },
+    "T": {
+      "item": "blocopolismod:silver_block"
+    }
+  },
+  "pattern": [
+    "STS",
+    "STS",
+    "   "
+  ],
+  "result": {
+    "count": 1,
+    "id": "blocopolismod:silver_fence_gate"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_bronze_slab": {
+      "conditions": {
+        "items": [
+          {
+            "items": "blocopolismod:bronze_slab"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:bronze_block_from_bronze_slab_stonecutting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_bronze_slab"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:bronze_block_from_bronze_slab_stonecutting"
+    ]
+  }
+}

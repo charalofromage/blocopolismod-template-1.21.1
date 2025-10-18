@@ -1,0 +1,11 @@
+// 1.21.1	2025-10-18T19:30:03.2025607	BlocopolisMod/Tags for minecraft:block
+5cde5bd4e3c0f5f6d06db48bc31fdfde683f9284 data\minecraft\tags\block\needs_iron_tool.json
+93f013d3321aeacbcc5de5d3049955ed640fbb09 data\minecraft\tags\block\fences.json
+78788317feeb7392a666360e4ecbe11db6b281af data\blocopolismod\tags\block\need_lead_tool.json
+68b248ba5fd5f609f3efc63a5e56b7bd0dc5ebb7 data\blocopolismod\tags\block\need_silver_tool.json
+e295ef7b9c7aa87cee0d99f365d8d6c9bd6bb0d8 data\minecraft\tags\block\needs_diamond_tool.json
+7be06dd4eecc1f0ac0ee863a09785c3c15c407b4 data\minecraft\tags\block\walls.json
+7610a75e4336235f2fc5ec71f206be6419cb7a33 data\minecraft\tags\block\mineable\pickaxe.json
+a8006dd706f04269370183016117381bf9568cc5 data\minecraft\tags\block\needs_stone_tool.json
+a249c46329a41538f49a564e1f14338aaf1be5a0 data\blocopolismod\tags\block\need_bronze_tool.json
+c2dcd6443eba0743d98406abe37738cf5d8efa0e data\minecraft\tags\block\fence_gates.json

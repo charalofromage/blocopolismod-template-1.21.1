@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/door_bottom_left",
+  "textures": {
+    "bottom": "blocopolismod:block/bronze_door_bottom",
+    "top": "blocopolismod:block/bronze_door_top"
+  }
+}

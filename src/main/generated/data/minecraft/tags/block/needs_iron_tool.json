@@ -1,0 +1,28 @@
+{
+  "values": [
+    "blocopolismod:bronze_block",
+    "blocopolismod:bronze_chest",
+    "blocopolismod:bronze_ore",
+    "blocopolismod:lead_block",
+    "blocopolismod:deepslate_bronze_ore",
+    "blocopolismod:deepslate_lead_ore",
+    "blocopolismod:lead_chest",
+    "blocopolismod:lead_ore",
+    "blocopolismod:raw_bronze_block",
+    "blocopolismod:raw_lead_block",
+    "blocopolismod:bronze_door",
+    "blocopolismod:bronze_fence",
+    "blocopolismod:bronze_fence_gate",
+    "blocopolismod:bronze_slab",
+    "blocopolismod:bronze_stairs",
+    "blocopolismod:bronze_trapdoor",
+    "blocopolismod:bronze_wall",
+    "blocopolismod:lead_door",
+    "blocopolismod:lead_fence",
+    "blocopolismod:lead_fence_gate",
+    "blocopolismod:lead_slab",
+    "blocopolismod:lead_stairs",
+    "blocopolismod:lead_trapdoor",
+    "blocopolismod:lead_wall"
+  ]
+}

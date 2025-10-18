@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "S": {
+      "item": "blocopolismod:lead_ingot"
+    },
+    "T": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    " SS",
+    " TS",
+    " T "
+  ],
+  "result": {
+    "count": 1,
+    "id": "blocopolismod:lead_axe"
+  }
+}

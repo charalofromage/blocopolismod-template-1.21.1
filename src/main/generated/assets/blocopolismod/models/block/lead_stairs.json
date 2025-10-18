@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "blocopolismod:block/lead_block",
+    "side": "blocopolismod:block/lead_block",
+    "top": "blocopolismod:block/lead_block"
+  }
+}

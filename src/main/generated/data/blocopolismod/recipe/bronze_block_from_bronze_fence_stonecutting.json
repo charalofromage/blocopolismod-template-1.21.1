@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "blocopolismod:bronze_fence"
+  },
+  "result": {
+    "count": 1,
+    "id": "blocopolismod:bronze_block"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "blocopolismod:block/bronze_slab"
+    },
+    "type=double": {
+      "model": "blocopolismod:block/bronze_block"
+    },
+    "type=top": {
+      "model": "blocopolismod:block/bronze_slab_top"
+    }
+  }
+}

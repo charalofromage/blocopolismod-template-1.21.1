@@ -1,0 +1,30 @@
+{
+  "values": [
+    "#blocopolismod:need_bronze_tool",
+    "blocopolismod:chicken_spawner",
+    "blocopolismod:turtle_spawner",
+    "blocopolismod:cow_spawner",
+    "blocopolismod:sheep_spawner",
+    "blocopolismod:squid_spawner",
+    "blocopolismod:rabbit_spawner",
+    "blocopolismod:zombie_spawner",
+    "blocopolismod:skeleton_spawner",
+    "blocopolismod:witch_spawner",
+    "blocopolismod:enderman_spawner",
+    "blocopolismod:spider_spawner",
+    "blocopolismod:pig_spawner",
+    "blocopolismod:chicken_spawnerup",
+    "blocopolismod:turtle_spawnerup",
+    "blocopolismod:cow_spawnerup",
+    "blocopolismod:sheep_spawnerup",
+    "blocopolismod:squid_spawnerup",
+    "blocopolismod:rabbit_spawnerup",
+    "blocopolismod:zombie_spawnerup",
+    "blocopolismod:skeleton_spawnerup",
+    "blocopolismod:witch_spawnerup",
+    "blocopolismod:enderman_spawnerup",
+    "blocopolismod:spider_spawnerup",
+    "blocopolismod:creeper_spawner",
+    "blocopolismod:pig_spawnerup"
+  ]
+}

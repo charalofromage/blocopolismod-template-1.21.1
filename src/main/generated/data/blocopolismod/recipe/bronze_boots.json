@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "S": {
+      "item": "blocopolismod:bronze_ingot"
+    }
+  },
+  "pattern": [
+    "S S",
+    "S S",
+    "   "
+  ],
+  "result": {
+    "count": 1,
+    "id": "blocopolismod:bronze_boots"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "minecraft:leather"
+    },
+    "P": {
+      "item": "blocopolismod:snake_skin"
+    },
+    "S": {
+      "item": "blocopolismod:lead_ingot"
+    }
+  },
+  "pattern": [
+    "CCC",
+    "S S",
+    "P P"
+  ],
+  "result": {
+    "count": 1,
+    "id": "blocopolismod:travel_leggings"
+  }
+}

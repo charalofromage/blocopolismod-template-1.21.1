@@ -1,0 +1,65 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_lead_ingot": {
+      "conditions": {
+        "items": [
+          {
+            "items": "blocopolismod:lead_ingot"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_plume_de_pan": {
+      "conditions": {
+        "items": [
+          {
+            "items": "blocopolismod:plume_de_pan"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_snake_skin": {
+      "conditions": {
+        "items": [
+          {
+            "items": "blocopolismod:snake_skin"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_string": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:string"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "blocopolismod:travel_chestplate"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_plume_de_pan",
+      "has_lead_ingot",
+      "has_snake_skin",
+      "has_string"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "blocopolismod:travel_chestplate"
+    ]
+  }
+}

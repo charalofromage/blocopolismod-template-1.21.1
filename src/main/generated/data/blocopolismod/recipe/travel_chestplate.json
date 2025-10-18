@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "P": {
+      "item": "blocopolismod:plume_de_pan"
+    },
+    "S": {
+      "item": "blocopolismod:snake_skin"
+    },
+    "T": {
+      "item": "minecraft:string"
+    },
+    "Z": {
+      "item": "blocopolismod:lead_ingot"
+    }
+  },
+  "pattern": [
+    "T T",
+    "ZPZ",
+    "SSS"
+  ],
+  "result": {
+    "count": 1,
+    "id": "blocopolismod:travel_chestplate"
+  }
+}

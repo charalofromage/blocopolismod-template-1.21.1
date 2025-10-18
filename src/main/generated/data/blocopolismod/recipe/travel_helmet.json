@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "blocopolismod:owl_eyes"
+    },
+    "S": {
+      "item": "blocopolismod:lead_ingot"
+    }
+  },
+  "pattern": [
+    "CSC",
+    "S S",
+    "   "
+  ],
+  "result": {
+    "count": 1,
+    "id": "blocopolismod:travel_helmet"
+  }
+}

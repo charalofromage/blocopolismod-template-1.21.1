@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "S": {
+      "item": "blocopolismod:poseidon_stick"
+    },
+    "T": {
+      "item": "minecraft:trident"
+    }
+  },
+  "pattern": [
+    "TTT",
+    " S ",
+    " S "
+  ],
+  "result": {
+    "count": 1,
+    "id": "blocopolismod:poseidon_weapon"
+  }
+}

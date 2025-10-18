@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "S": {
+      "item": "blocopolismod:bronze_block"
+    }
+  },
+  "pattern": [
+    "SSS",
+    "   ",
+    "   "
+  ],
+  "result": {
+    "count": 2,
+    "id": "blocopolismod:bronze_slab"
+  }
+}

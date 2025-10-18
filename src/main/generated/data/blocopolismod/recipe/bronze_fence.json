@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "S": {
+      "item": "blocopolismod:bronze_block"
+    },
+    "T": {
+      "item": "blocopolismod:bronze_stick"
+    }
+  },
+  "pattern": [
+    "STS",
+    "STS",
+    "   "
+  ],
+  "result": {
+    "count": 3,
+    "id": "blocopolismod:bronze_fence"
+  }
+}

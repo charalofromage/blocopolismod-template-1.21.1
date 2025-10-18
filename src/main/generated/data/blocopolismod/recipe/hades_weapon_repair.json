@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "blocopolismod:hades_weapon"
+    },
+    {
+      "item": "blocopolismod:piece_of_blade_of_hades"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "blocopolismod:hades_weapon"
+  }
+}

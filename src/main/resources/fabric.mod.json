@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "blocopolismod",
+	"version": "${version}",
+	"name": "BlocopolisMod",
+	"description": "The official Minecraft mod of Blocopolis.",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.charalofromage.blocopolismod.BlocopolisMod"
+		],
+		"fabric-datagen": [
+			"net.charalofromage.blocopolismod.BlocopolisModDataGenerator"
+		],
+		"client": [
+			"net.charalofromage.blocopolismod.BlocopolisModClient"
+		]
+	},
+	"mixins": [
+		"blocopolismod.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.9",
+		"minecraft": "~1.21.1",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}

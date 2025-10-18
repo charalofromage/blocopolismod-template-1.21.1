@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 100,
+  "experience": 0.25,
+  "group": "lead_ingot",
+  "ingredient": {
+    "item": "blocopolismod:raw_silver"
+  },
+  "result": {
+    "id": "blocopolismod:lead_ingot"
+  }
+}
