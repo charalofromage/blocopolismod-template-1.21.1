@@ -1,4 +1,4 @@
-// 1.21.1	2025-10-18T19:30:03.2087841	BlocopolisMod/Model Definitions
+// 1.21.1	2025-10-18T23:16:17.6833859	BlocopolisMod/Model Definitions
 f368f4b1372b751ec29509d6df8104021d31dead assets\blocopolismod\blockstates\bronze_fence.json
 a7bd7e6f2be20fad07f93946c8ea310fc6cf9392 assets\blocopolismod\models\item\pig_spawnerup.json
 86a5c6ba1ef25d1f7d001d0567e1f5a29f28a370 assets\blocopolismod\models\item\travel_helmet_gold_trim.json
@@ -291,8 +291,8 @@ e0d50d4198aca84df3fd4816305b7087f7e63894 assets\blocopolismod\models\block\pig_s
 69265a055bc98ae0a65d3f42618934d998fa1e53 assets\blocopolismod\models\item\aphrodite_shell.json
 45b54492c8ccd3c10716ff9b87ebaa2beda8291f assets\blocopolismod\models\item\lead_chestplate_iron_trim.json
 4b70c293566066ae0a20870a0469bfcc796233f3 assets\blocopolismod\models\block\lead_door_top_right.json
-ebff6b7632a023c82818ea898f4bcf957099d373 assets\blocopolismod\models\item\lead_leggings_netherite_trim.json
 533b3a442d719428a09652c2b9e31f4a104f57f8 assets\blocopolismod\models\item\travel_boots_amethyst_trim.json
+ebff6b7632a023c82818ea898f4bcf957099d373 assets\blocopolismod\models\item\lead_leggings_netherite_trim.json
 06135306e753ad845aca2d57beaf2c92dca50f0a assets\blocopolismod\blockstates\chicken_spawnerup.json
 f8f8373e1ff00eac7cba4d3b05f995b2e01aaa65 assets\blocopolismod\models\block\silver_wall_inventory.json
 796ac2b37c207fed82dd84287180307d928e7fc8 assets\blocopolismod\models\block\lead_wall_side_tall.json

@@ -33,12 +33,14 @@ public class ModBlocks {
             new Block(AbstractBlock.Settings.create().sounds(BlockSoundGroup.STONE).requiresTool().strength(5f)));
     public static final Block RAW_BRONZE_BLOCK = registerBlock("raw_bronze_block",
             new Block(AbstractBlock.Settings.create().sounds(BlockSoundGroup.STONE).requiresTool().strength(5f)));
+
+
     public static final Block SILVER_CHEST = registerBlock("silver_chest",
-            new ModChest(AbstractBlock.Settings.create().sounds(BlockSoundGroup.STONE).requiresTool().strength(6f)));
+            new ModSilverChest(AbstractBlock.Settings.create().sounds(BlockSoundGroup.STONE).requiresTool().strength(6f)));
     public static final Block LEAD_CHEST = registerBlock("lead_chest",
-            new ModChest(AbstractBlock.Settings.create().sounds(BlockSoundGroup.STONE).requiresTool().strength(5f)));
+            new ModLeadChest(AbstractBlock.Settings.create().sounds(BlockSoundGroup.STONE).requiresTool().strength(5f)));
     public static final Block BRONZE_CHEST = registerBlock("bronze_chest",
-            new ModChest(AbstractBlock.Settings.create().sounds(BlockSoundGroup.STONE).requiresTool().strength(5f)));
+            new ModBronzeChest(AbstractBlock.Settings.create().sounds(BlockSoundGroup.STONE).requiresTool().strength(5f)));
 
     public static final Block DEEPSLATE_LEAD_ORE = registerBlock("deepslate_lead_ore",
             new Block(AbstractBlock.Settings.create().sounds(BlockSoundGroup.DEEPSLATE).requiresTool().strength(5f)));

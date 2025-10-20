@@ -6,18 +6,16 @@ import net.charalofromage.blocopolismod.entity.ModEntities;
 import net.charalofromage.blocopolismod.entity.custom.SnakeEntity;
 import net.charalofromage.blocopolismod.item.ModItemGroups;
 import net.charalofromage.blocopolismod.item.ModItems;
+import net.charalofromage.blocopolismod.screen.ModScreenHandlers;
+import net.charalofromage.blocopolismod.screen.custom.SilverChestScreen;
 import net.charalofromage.blocopolismod.util.TickScheduler;
 import net.charalofromage.blocopolismod.world.gen.ModWorldGeneration;
 import net.fabricmc.api.ModInitializer;
 
 
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
-import net.fabricmc.fabric.api.item.v1.EnchantmentEvents;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
-import net.fabricmc.fabric.api.util.TriState;
-import net.minecraft.enchantment.Enchantment;
-import net.minecraft.enchantment.Enchantments;
-import net.minecraft.item.ItemStack;
+import net.minecraft.client.gui.screen.ingame.HandledScreens;
 import net.minecraft.server.world.ServerWorld;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -35,12 +33,14 @@ public class BlocopolisMod implements ModInitializer {
 		ModEntities.registerModEntities();
 
 		ModBlockEntities.registerBlockEntities();
+		ModScreenHandlers.registerScreenHandlers();
+
+		HandledScreens.register(ModScreenHandlers.SILVER_CHEST_SCREEN_HANDLER, SilverChestScreen::new);
 
 		FabricDefaultAttributeRegistry.register(ModEntities.SNAKE, SnakeEntity.createAttributes());
 
 		ServerTickEvents.END_WORLD_TICK.register((ServerWorld world) -> {
 			TickScheduler.tick(world);
 		});
-
 	}
 }
