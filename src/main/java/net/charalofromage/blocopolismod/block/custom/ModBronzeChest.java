@@ -5,11 +5,14 @@ import net.charalofromage.blocopolismod.block.entity.custom.ModBronzeChestEntity
 import net.charalofromage.blocopolismod.block.entity.custom.ModSilverChestEntity;
 import net.minecraft.block.*;
 import net.minecraft.block.entity.BlockEntity;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.DirectionProperty;
 import net.minecraft.state.property.Properties;
+import net.minecraft.util.ActionResult;
 import net.minecraft.util.ItemScatterer;
+import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
@@ -20,9 +23,8 @@ public class ModBronzeChest extends BlockWithEntity implements BlockEntityProvid
 
     public static final DirectionProperty FACING = Properties.HORIZONTAL_FACING; //Permet de faire le Facing du block comme HorizontalFacingBlock
 
-
     private static final VoxelShape SHAPE =
-            Block.createCuboidShape(2, 0, 2, 14, 13, 14);
+            Block.createCuboidShape(1, 0, 1, 15, 14, 15);
     public static final MapCodec<ModBronzeChest> CODEC = ModBronzeChest.createCodec(ModBronzeChest::new);
     public ModBronzeChest(Settings settings) {
         super(settings);
@@ -54,14 +56,13 @@ public class ModBronzeChest extends BlockWithEntity implements BlockEntityProvid
 
         if (state.getBlock() != newState.getBlock()){
             BlockEntity blockEntity = world.getBlockEntity(pos);
-            if (blockEntity instanceof ModSilverChestEntity){
-                ItemScatterer.spawn(world, pos, ((ModSilverChestEntity) blockEntity));
+            if (blockEntity instanceof ModBronzeChestEntity){
+                ItemScatterer.spawn(world, pos, ((ModBronzeChestEntity) blockEntity));
                 world.updateComparators(pos, this);
             }
             super.onStateReplaced(state, world, pos, newState, moved);
         }
     }
-
 
     @Override
     public BlockState getPlacementState(ItemPlacementContext ctx) {
@@ -71,5 +72,15 @@ public class ModBronzeChest extends BlockWithEntity implements BlockEntityProvid
     @Override
     protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
         builder.add(FACING);
+    }
+
+    @Override
+    protected ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, BlockHitResult hit) {
+        if (!world.isClient){
+            if (world.getBlockEntity(pos) instanceof ModBronzeChestEntity modBronzeChestEntity){
+                player.openHandledScreen(modBronzeChestEntity);
+            }
+        }
+        return ActionResult.SUCCESS;
     }
 }

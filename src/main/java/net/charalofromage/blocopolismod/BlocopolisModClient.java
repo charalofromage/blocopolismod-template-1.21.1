@@ -1,18 +1,25 @@
 package net.charalofromage.blocopolismod;
 
 import net.charalofromage.blocopolismod.block.ModBlocks;
+import net.charalofromage.blocopolismod.block.entity.ModBlockEntities;
 import net.charalofromage.blocopolismod.entity.ModEntities;
 import net.charalofromage.blocopolismod.entity.client.LightningOrbProjectileModel;
 import net.charalofromage.blocopolismod.entity.client.LightningOrbProjectileRenderer;
 import net.charalofromage.blocopolismod.entity.client.SnakeModel;
 import net.charalofromage.blocopolismod.entity.client.SnakeRenderer;
 import net.charalofromage.blocopolismod.entity.custom.LightningOrbProjectileEntity;
+import net.charalofromage.blocopolismod.screen.ModScreenHandlers;
+import net.charalofromage.blocopolismod.screen.custom.BronzeChestScreen;
+import net.charalofromage.blocopolismod.screen.custom.LeadChestScreen;
+import net.charalofromage.blocopolismod.screen.custom.SilverChestScreen;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityModelLayerRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.fabricmc.fabric.impl.client.indigo.renderer.render.BlockRenderInfo;
+import net.minecraft.client.gui.screen.ingame.HandledScreens;
 import net.minecraft.client.render.RenderLayer;
+import net.minecraft.client.render.block.entity.BlockEntityRendererFactories;
 import net.minecraft.client.render.entity.model.EntityModelLayer;
 
 public class BlocopolisModClient implements ClientModInitializer {
@@ -31,5 +38,9 @@ public class BlocopolisModClient implements ClientModInitializer {
         EntityModelLayerRegistry.registerModelLayer(LightningOrbProjectileModel.LIGHTNING_ORB, LightningOrbProjectileModel::getTexturedModelData);
         EntityRendererRegistry.register(ModEntities.LIGHTNING_ORB, LightningOrbProjectileRenderer::new);
 
+
+        HandledScreens.register(ModScreenHandlers.SILVER_CHEST_SCREEN_HANDLER, SilverChestScreen::new);
+        HandledScreens.register(ModScreenHandlers.LEAD_CHEST_SCREEN_HANDLER, LeadChestScreen::new);
+        HandledScreens.register(ModScreenHandlers.BRONZE_CHEST_SCREEN_HANDLER, BronzeChestScreen::new);
     }
 }

@@ -35,8 +35,6 @@ public class BlocopolisMod implements ModInitializer {
 		ModBlockEntities.registerBlockEntities();
 		ModScreenHandlers.registerScreenHandlers();
 
-		HandledScreens.register(ModScreenHandlers.SILVER_CHEST_SCREEN_HANDLER, SilverChestScreen::new);
-
 		FabricDefaultAttributeRegistry.register(ModEntities.SNAKE, SnakeEntity.createAttributes());
 
 		ServerTickEvents.END_WORLD_TICK.register((ServerWorld world) -> {

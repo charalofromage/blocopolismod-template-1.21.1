@@ -10,21 +10,17 @@ import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 
 
-import net.minecraft.client.gui.widget.ScrollableWidget;
-import net.minecraft.client.gui.DrawContext;
-
-
-public class SilverChestScreen extends HandledScreen<SilverChestScreenHandler> {
+public class BronzeChestScreen extends HandledScreen<BronzeChestScreenHandler> {
 
 
     public static final Identifier GUI_TEXTURE =
-            Identifier.of(BlocopolisMod.MOD_ID, "textures/gui/silver_chest/silver_chest_gui.png");
+            Identifier.of(BlocopolisMod.MOD_ID, "textures/gui/bronze_chest/bronze_chest_gui.png");
 
-    public SilverChestScreen(SilverChestScreenHandler handler, PlayerInventory inventory, Text title) {
+    public BronzeChestScreen(BronzeChestScreenHandler handler, PlayerInventory inventory, Text title) {
         super(handler, inventory, title);
 
-        this.backgroundWidth = 338;
-        this.backgroundHeight = 328;
+        this.backgroundWidth = 176;
+        this.backgroundHeight = 274;
     }
 
 
@@ -45,7 +41,7 @@ public class SilverChestScreen extends HandledScreen<SilverChestScreenHandler> {
         context.drawText(this.textRenderer, this.title, 8, 6, 4210752, false);
 
         // Le texte "Inventory"
-        context.drawText(this.textRenderer, this.playerInventoryTitle, 90, this.backgroundHeight - 94, 4210752, false);
+        context.drawText(this.textRenderer, this.playerInventoryTitle, 8, 181, 4210752, false);
     }
 
     @Override

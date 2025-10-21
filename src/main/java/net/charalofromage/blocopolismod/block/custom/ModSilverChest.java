@@ -83,9 +83,10 @@ public class ModSilverChest extends BlockWithEntity implements BlockEntityProvid
     protected ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, BlockHitResult hit) {
         if (!world.isClient){
             if (world.getBlockEntity(pos) instanceof ModSilverChestEntity modSilverChestEntity){
+                
             player.openHandledScreen(modSilverChestEntity);
             }
         }
-        return super.onUse(state, world, pos, player, hit);
+        return ActionResult.SUCCESS;
     }
 }
