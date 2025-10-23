@@ -72,9 +72,6 @@ public class ModBronzeChestEntity extends BlockEntity implements ImplementedInve
     @Nullable
     @Override
     public ScreenHandler createMenu(int syncId, PlayerInventory playerInventory, PlayerEntity player) {
-        if (this.inventory.size() != 81) {
-            throw new IllegalStateException("BronzeChestEntity inventory size mismatch: " + this.inventory.size());
-        }
         return new BronzeChestScreenHandler(syncId, playerInventory, this.pos);
     }
 }

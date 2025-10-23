@@ -4,7 +4,7 @@
     "item": "blocopolismod:silver_nugget"
   },
   "result": {
-    "item": "blocopolismod:silver_nugget",
-    "count": 10
+    "count": 1,
+    "id": "blocopolismod:silver_nugget"
   }
 }

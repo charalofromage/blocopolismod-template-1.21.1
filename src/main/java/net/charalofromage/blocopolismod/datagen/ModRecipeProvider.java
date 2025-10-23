@@ -564,6 +564,26 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(ModItems.PLUME_DE_PAN), conditionsFromItem(ModItems.PLUME_DE_PAN)).
                 offerTo(recipeExporter);
 
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.COIN_PATTERN, 1)
+                .pattern("DDD")
+                .pattern("DND")
+                .pattern("DDD")
+                .input('D', Items.DIAMOND)
+                .input('N', ModItems.LEAD_NUGGET)
+                .criterion(hasItem(ModItems.LEAD_NUGGET), conditionsFromItem(ModItems.LEAD_NUGGET))
+                .criterion(hasItem(Items.DIAMOND), conditionsFromItem(Items.DIAMOND)).
+                offerTo(recipeExporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.INGOT_PATTERN, 1)
+                .pattern("DDD")
+                .pattern("DND")
+                .pattern("DDD")
+                .input('D', Items.DIAMOND)
+                .input('N', ModItems.LEAD_INGOT)
+                .criterion(hasItem(ModItems.LEAD_INGOT), conditionsFromItem(ModItems.LEAD_INGOT))
+                .criterion(hasItem(Items.DIAMOND), conditionsFromItem(Items.DIAMOND)).
+                offerTo(recipeExporter);
+
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.HADES_WEAPON)
                 .input(ModItems.HADES_WEAPON)
                 .input(ModItems.PIECE_OF_BLADE_OF_HADES)

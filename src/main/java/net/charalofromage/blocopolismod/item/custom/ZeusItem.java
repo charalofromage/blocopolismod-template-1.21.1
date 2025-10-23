@@ -55,6 +55,7 @@ public class ZeusItem extends Item {
             world.spawnEntity(lightningOrbProjectileEntity);
 
             stack.damage(128, player,EquipmentSlot.MAINHAND);
+            player.getItemCooldownManager().set(this, 200);
 
             return TypedActionResult.success(stack, world.isClient());
         }

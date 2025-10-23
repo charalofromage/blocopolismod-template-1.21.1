@@ -39,6 +39,10 @@ public class ModItems {
     public static final Item APHRODITE_SHELLS = registerItem("aphrodite_shells", new AphroditeShells(new Item.Settings().maxDamage(8).maxCount(1)));
     public static final Item SPAWNER_SPEED_UPGRADE = registerItem("spawner_speed_upgrade", new Spawner_upgrade(new Item.Settings()));
     public static final Item SPAWNER_CREEPER_UPGRADE = registerItem("spawner_creeper_upgrade", new Item(new Item.Settings()));
+    public static final Item COIN_PATTERN = registerItem("coin_pattern", new Item(new Item.Settings()));
+    public static final Item SILVER_COIN = registerItem("silver_coin", new Item(new Item.Settings().maxCount(99)));
+    public static final Item BRONZE_COIN = registerItem("bronze_coin", new Item(new Item.Settings().maxCount(99)));
+    public static final Item INGOT_PATTERN = registerItem("ingot_pattern", new Item(new Item.Settings()));
 
 
     public static final Item POSEIDON_WEAPON = registerItem("poseidon_weapon",

@@ -58,6 +58,8 @@ public class ModModelProvider extends FabricModelProvider {
 
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.AUTOKILLERSPAWNER);
 
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.MONEY_GENERATOR);
+
         BlockStateModelGenerator.BlockTexturePool silverPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.SILVER_BLOCK);
 
         silverPool.stairs(ModBlocks.SILVER_STAIRS);
@@ -92,12 +94,6 @@ public class ModModelProvider extends FabricModelProvider {
 
         blockStateModelGenerator.registerDoor(ModBlocks.LEAD_DOOR);
         blockStateModelGenerator.registerTrapdoor(ModBlocks.LEAD_TRAPDOOR);
-
-        //blockStateModelGenerator.registerNorthDefaultHorizontalRotation(ModBlocks.SILVER_CHEST);
-        //blockStateModelGenerator.registerNorthDefaultHorizontalRotation(ModBlocks.BRONZE_CHEST);
-        //blockStateModelGenerator.registerNorthDefaultHorizontalRotation(ModBlocks.LEAD_CHEST);
-
-
 
 
 
@@ -140,6 +136,10 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.APHRODITE_SHELLS, Models.GENERATED);
         itemModelGenerator.register(ModItems.SPAWNER_SPEED_UPGRADE, Models.GENERATED);
         itemModelGenerator.register(ModItems.SPAWNER_CREEPER_UPGRADE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.COIN_PATTERN, Models.GENERATED);
+        itemModelGenerator.register(ModItems.INGOT_PATTERN, Models.GENERATED);
+        itemModelGenerator.register(ModItems.BRONZE_COIN, Models.GENERATED);
+        itemModelGenerator.register(ModItems.SILVER_COIN, Models.GENERATED);
 
         itemModelGenerator.register(ModItems.SILVER_AXE, Models.HANDHELD);
         itemModelGenerator.register(ModItems.BRONZE_AXE, Models.HANDHELD);

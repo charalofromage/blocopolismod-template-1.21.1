@@ -38,7 +38,7 @@
   "item.blocopolismod.bronze_helmet": "Casque en bronze",
   "item.blocopolismod.bronze_chestplate": "Plastron en bronze",
   "item.blocopolismod.bronze_leggings": "Jambières en bronze",
-  "item.blocopolismod.bronze_boots": "Bottes en abronze",
+  "item.blocopolismod.bronze_boots": "Bottes en bronze",
   "item.blocopolismod.travel_helmet": "Casque du voyageur",
   "item.blocopolismod.travel_chestplate": "Plastron du voyageur",
   "item.blocopolismod.travel_leggings": "Jambières du voyageur",
@@ -73,9 +73,9 @@
   "block.blocopolismod.lead_block": "Bloc de plomb",
   "block.blocopolismod.bronze_block": "Bloc de bronze",
   "block.blocopolismod.raw_bronze_block": "Bloc de bronze cru",
-  "block.blocopolismod.deepslate_bronze_ore": "Minerai de bronze des abymes",
-  "block.blocopolismod.deepslate_lead_ore": "Minerai de plomb des abymes",
-  "block.blocopolismod.deepslate_silver_ore": "Minerai d'argent des abymes",
+  "block.blocopolismod.deepslate_bronze_ore": "Minerai de bronze des abysses",
+  "block.blocopolismod.deepslate_lead_ore": "Minerai de plomb des abysses",
+  "block.blocopolismod.deepslate_silver_ore": "Minerai d'argent des abysses",
   "block.blocopolismod.bronze_ore": "Minerai de bronze",
   "block.blocopolismod.lead_ore": "Minerai de plomb",
   "block.blocopolismod.silver_ore": "Minerai d'argent",
@@ -100,6 +100,8 @@
   "block.blocopolismod.bronze_slab": "Dalle en bronze",
   "block.blocopolismod.bronze_fence": "Barrière en bronze",
   "block.blocopolismod.bronze_fence_gate": "Portillon en bronze",
+  "block.blocopolismod.money_generator": "Rémouleur",
+
 
   "itemgroup.blocopolismod.blocopolis_items": "Blocopolis",
 

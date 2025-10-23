@@ -6,6 +6,7 @@ import net.charalofromage.blocopolismod.entity.ModEntities;
 import net.charalofromage.blocopolismod.entity.custom.SnakeEntity;
 import net.charalofromage.blocopolismod.item.ModItemGroups;
 import net.charalofromage.blocopolismod.item.ModItems;
+import net.charalofromage.blocopolismod.recipe.ModRecipes;
 import net.charalofromage.blocopolismod.screen.ModScreenHandlers;
 import net.charalofromage.blocopolismod.screen.custom.SilverChestScreen;
 import net.charalofromage.blocopolismod.util.TickScheduler;
@@ -34,6 +35,8 @@ public class BlocopolisMod implements ModInitializer {
 
 		ModBlockEntities.registerBlockEntities();
 		ModScreenHandlers.registerScreenHandlers();
+
+		ModRecipes.registerRecipes();
 
 		FabricDefaultAttributeRegistry.register(ModEntities.SNAKE, SnakeEntity.createAttributes());
 

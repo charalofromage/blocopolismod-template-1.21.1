@@ -81,14 +81,14 @@ public class SilverChestScreenHandler extends ScreenHandler {
     private void addPlayerInventory(PlayerInventory playerInventory){
         for (int i = 0; i < 3; ++i){
             for (int l = 0; l < 9; ++l){
-                this.addSlot(new Slot(playerInventory, l + i * 9 + 9, 89 + l * 18, 247 + i * 18));
+                this.addSlot(new Slot(playerInventory, l + i * 9 + 9, 89 + l * 18, 245 + i * 18));
             }
         }
     }
 
     private void addPlayerHotbar(PlayerInventory playerInventory){
         for (int i = 0; i < 9; ++i){
-            this.addSlot(new Slot(playerInventory, i,  89 + i * 18, 305));
+            this.addSlot(new Slot(playerInventory, i,  89 + i * 18, 303));
         }
     }
 

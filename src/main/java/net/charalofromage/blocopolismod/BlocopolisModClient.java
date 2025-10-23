@@ -9,9 +9,7 @@ import net.charalofromage.blocopolismod.entity.client.SnakeModel;
 import net.charalofromage.blocopolismod.entity.client.SnakeRenderer;
 import net.charalofromage.blocopolismod.entity.custom.LightningOrbProjectileEntity;
 import net.charalofromage.blocopolismod.screen.ModScreenHandlers;
-import net.charalofromage.blocopolismod.screen.custom.BronzeChestScreen;
-import net.charalofromage.blocopolismod.screen.custom.LeadChestScreen;
-import net.charalofromage.blocopolismod.screen.custom.SilverChestScreen;
+import net.charalofromage.blocopolismod.screen.custom.*;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityModelLayerRegistry;
@@ -42,5 +40,7 @@ public class BlocopolisModClient implements ClientModInitializer {
         HandledScreens.register(ModScreenHandlers.SILVER_CHEST_SCREEN_HANDLER, SilverChestScreen::new);
         HandledScreens.register(ModScreenHandlers.LEAD_CHEST_SCREEN_HANDLER, LeadChestScreen::new);
         HandledScreens.register(ModScreenHandlers.BRONZE_CHEST_SCREEN_HANDLER, BronzeChestScreen::new);
+
+        HandledScreens.register(ModScreenHandlers.MONEY_GENERATOR_SCREEN_HANDLER, MoneyGeneratorScreen::new);
     }
 }

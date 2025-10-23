@@ -81,14 +81,14 @@ public class BronzeChestScreenHandler extends ScreenHandler {
     private void addPlayerInventory(PlayerInventory playerInventory){
         for (int i = 0; i < 3; ++i){
             for (int l = 0; l < 9; ++l){
-                this.addSlot(new Slot(playerInventory, l + i * 9 + 9, 8 + l * 18, 194 + i * 18));
+                this.addSlot(new Slot(playerInventory, l + i * 9 + 9, 8 + l * 18, 192 + i * 18));
             }
         }
     }
 
     private void addPlayerHotbar(PlayerInventory playerInventory){
         for (int i = 0; i < 9; ++i){
-            this.addSlot(new Slot(playerInventory, i,  8 + i * 18, 252));
+            this.addSlot(new Slot(playerInventory, i,  8 + i * 18, 250));
         }
     }
 
@@ -101,6 +101,5 @@ public class BronzeChestScreenHandler extends ScreenHandler {
                 this.addSlot(new Slot(inventory, index, x, y));
             }
         }
-        System.out.println("Slots: " + this.slots.size());
     }
 }

@@ -1,10 +1,10 @@
 {
   "type": "blocopolismod:money_generator",
   "ingredient": {
-    "item": "blocopolismod:silver_nugget"
+    "item": "blocopolismod:silver_helmet"
   },
   "result": {
-    "count": 10,
+    "count": 25,
     "id": "blocopolismod:silver_nugget"
   }
 }

@@ -104,6 +104,10 @@ public static final ItemGroup BLOCOPOLIS_ITEMS = Registry.register(Registries.IT
                     entries.add(ModItems.LEAD_BACKPACK);
 
                     entries.add(ModItems.RANDOM_SPAWNER);
+                    entries.add(ModItems.COIN_PATTERN);
+                    entries.add(ModItems.BRONZE_COIN);
+                    entries.add(ModItems.SILVER_COIN);
+                    entries.add(ModItems.INGOT_PATTERN);
 
                     entries.add(ModItems.PLUME_DE_PAN);
                     entries.add(ModItems.SNAKE_SKIN);
@@ -148,6 +152,8 @@ public static final ItemGroup BLOCOPOLIS_ITEMS = Registry.register(Registries.IT
                     entries.add(ModBlocks.SQUID_SPAWNER);
                     entries.add(ModBlocks.RABBIT_SPAWNER);
                     entries.add(ModBlocks.WITCH_SPAWNER);
+
+                    entries.add(ModBlocks.MONEY_GENERATOR);
 
                     entries.add(ModItems.SNAKE_SPAWN_EGG);
                 })
