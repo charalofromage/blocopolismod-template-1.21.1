@@ -1,0 +1,10 @@
+{
+  "type": "blocopolismod:money_generator",
+  "ingredient": {
+    "item": "blocopolismod:silver_nugget"
+  },
+  "result": {
+    "item": "blocopolismod:silver_nugget",
+    "count": 10
+  }
+}

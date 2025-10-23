@@ -1,0 +1,10 @@
+{
+  "type": "blocopolismod:money_generator",
+  "ingredient": {
+    "item": "blocopolismod:bronze_leggings"
+  },
+  "result": {
+    "count": 35,
+    "id": "blocopolismod:bronze_nugget"
+  }
+}
