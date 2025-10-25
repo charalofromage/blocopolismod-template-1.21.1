@@ -1,7 +1,7 @@
 {
   "type": "blocopolismod:money_generator_craft",
 
-  "quantity_required": 448,
+  "quantity_required": 4000,
   "ingot": {
     "item": "blocopolismod:silver_ingot"
   },

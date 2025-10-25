@@ -61,6 +61,10 @@ public record MoneyGeneratorRecipe(Ingredient inputItem, int output) implements 
         return ModRecipes.MONEY_GENERATOR_TYPE;
     }
 
+    public int getOutputValue(){
+        return output;
+    }
+
     public static class Serializer implements RecipeSerializer<MoneyGeneratorRecipe> {
 
         public static final MapCodec<MoneyGeneratorRecipe> CODEC = RecordCodecBuilder.mapCodec(inst -> inst.group(

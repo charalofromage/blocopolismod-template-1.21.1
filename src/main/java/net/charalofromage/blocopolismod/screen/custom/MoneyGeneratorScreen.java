@@ -33,8 +33,6 @@ public class MoneyGeneratorScreen extends HandledScreen<MoneyGeneratorScreenHand
 
         this.backgroundWidth = 176;
         this.backgroundHeight = 274;
-
-
     }
 
 

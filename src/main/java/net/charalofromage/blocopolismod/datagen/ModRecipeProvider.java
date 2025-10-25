@@ -458,31 +458,6 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .input('S', ModItems.LEAD_INGOT).criterion(hasItem(ModItems.LEAD_INGOT), conditionsFromItem(ModItems.LEAD_INGOT)).offerTo(recipeExporter);
 
 
-        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModItems.SILVER_HELMET, 1)
-                .pattern("SSS")
-                .pattern("S S")
-                .pattern("   ")
-                .input('S', ModBlocks.SILVER_BLOCK).criterion(hasItem(ModBlocks.SILVER_BLOCK), conditionsFromItem(ModBlocks.SILVER_BLOCK)).offerTo(recipeExporter);
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModItems.SILVER_CHESTPLATE, 1)
-                .pattern("S S")
-                .pattern("SSS")
-                .pattern("SSS")
-                .input('S', ModBlocks.SILVER_BLOCK).criterion(hasItem(ModBlocks.SILVER_BLOCK), conditionsFromItem(ModBlocks.SILVER_BLOCK)).offerTo(recipeExporter);
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModItems.SILVER_LEGGINGS, 1)
-                .pattern("SSS")
-                .pattern("S S")
-                .pattern("S S")
-                .input('S', ModBlocks.SILVER_BLOCK).criterion(hasItem(ModBlocks.SILVER_BLOCK), conditionsFromItem(ModBlocks.SILVER_BLOCK)).offerTo(recipeExporter);
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModItems.SILVER_BOOTS, 1)
-                .pattern("S S")
-                .pattern("S S")
-                .pattern("   ")
-                .input('S', ModBlocks.SILVER_BLOCK).criterion(hasItem(ModBlocks.SILVER_BLOCK), conditionsFromItem(ModBlocks.SILVER_BLOCK)).offerTo(recipeExporter);
-
-
         ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModItems.TRAVEL_HELMET, 1)
                 .pattern("CSC")
                 .pattern("S S")

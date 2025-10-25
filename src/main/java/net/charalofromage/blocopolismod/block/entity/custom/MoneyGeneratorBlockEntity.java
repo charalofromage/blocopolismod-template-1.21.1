@@ -37,16 +37,13 @@ public class MoneyGeneratorBlockEntity extends BlockEntity implements ExtendedSc
 
     private final DefaultedList<ItemStack> inventory = DefaultedList.ofSize(5, ItemStack.EMPTY);
 
-
     private final int INPUT_SLOT = 0;
     private final int OUTPUT_SLOT = 1;
     private final int LAVA_SLOT = 2;
     private final int INGOT_SLOT = 3;
     private final int PATTERN_SLOT = 4;
 
-
     protected final PropertyDelegate propertyDelegate;
-
 
     private int smeltProgress = 0;
     private int maxSmeltProgress = 100;
@@ -73,6 +70,7 @@ public class MoneyGeneratorBlockEntity extends BlockEntity implements ExtendedSc
                     ModBlocks.BRONZE_BLOCK.asItem(), ModBlocks.BRONZE_SLAB.asItem(), ModBlocks.BRONZE_STAIRS.asItem(),
                     ModBlocks.BRONZE_WALL.asItem(), ModBlocks.BRONZE_FENCE.asItem(), ModBlocks.BRONZE_FENCE_GATE.asItem(),
                     ModBlocks.BRONZE_DOOR.asItem(), ModBlocks.BRONZE_TRAPDOOR.asItem() };
+
 
     public MoneyGeneratorBlockEntity(BlockPos pos, BlockState state) {
         super(ModBlockEntities.MONEY_GENERATOR_BE, pos, state);
@@ -159,10 +157,6 @@ public class MoneyGeneratorBlockEntity extends BlockEntity implements ExtendedSc
 
         super.readNbt(nbt, registryLookup);
     }
-
-
-
-
 
     public void tick(World world, BlockPos pos, BlockState state) {
         if (!world.isClient) {
