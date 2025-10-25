@@ -1,0 +1,14 @@
+{
+  "type": "blocopolismod:money_generator_craft",
+
+  "quantity_required": 784,
+  "ingot": {
+    "item": "blocopolismod:bronze_ingot"
+  },
+  "pattern": {
+    "item": "blocopolismod:leggings_pattern"
+  },
+  "result": {
+    "id": "blocopolismod:bronze_leggings"
+  }
+}

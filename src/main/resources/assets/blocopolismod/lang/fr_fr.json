@@ -111,5 +111,7 @@
 
   "trim_pattern.blocopolismod.charalo" : "Template vide",
 
-  "entity.blocopolismod.snake" : "Serpent"
+  "entity.blocopolismod.snake" : "Serpent",
+
+  "entity.minecraft.villager.blocopolismod.trader": "Trader"
 }

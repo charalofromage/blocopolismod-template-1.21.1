@@ -1,0 +1,14 @@
+{
+  "type": "blocopolismod:money_generator_craft",
+
+  "quantity_required": 224,
+  "ingot": {
+    "item": "blocopolismod:silver_ingot"
+  },
+  "pattern": {
+    "item": "blocopolismod:hoe_pattern"
+  },
+  "result": {
+    "id": "blocopolismod:silver_hoe_head"
+  }
+}

@@ -54,6 +54,7 @@
     "blocopolismod:spider_spawnerup",
     "blocopolismod:creeper_spawner",
     "blocopolismod:autokillerspawner",
-    "blocopolismod:pig_spawnerup"
+    "blocopolismod:pig_spawnerup",
+    "blocopolismod:money_generator"
   ]
 }

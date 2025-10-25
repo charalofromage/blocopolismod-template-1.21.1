@@ -1,11 +1,10 @@
 package net.charalofromage.blocopolismod.block.entity.custom;
 
+import net.charalofromage.blocopolismod.block.ModBlocks;
 import net.charalofromage.blocopolismod.block.entity.ImplementedInventory;
 import net.charalofromage.blocopolismod.block.entity.ModBlockEntities;
 import net.charalofromage.blocopolismod.item.ModItems;
-import net.charalofromage.blocopolismod.recipe.ModRecipes;
-import net.charalofromage.blocopolismod.recipe.MoneyGeneratorRecipe;
-import net.charalofromage.blocopolismod.recipe.MoneyGeneratorRecipeInput;
+import net.charalofromage.blocopolismod.recipe.*;
 import net.charalofromage.blocopolismod.screen.custom.MoneyGeneratorScreenHandler;
 import net.fabricmc.fabric.api.screenhandler.v1.ExtendedScreenHandlerFactory;
 import net.minecraft.block.BlockState;
@@ -42,8 +41,8 @@ public class MoneyGeneratorBlockEntity extends BlockEntity implements ExtendedSc
     private final int INPUT_SLOT = 0;
     private final int OUTPUT_SLOT = 1;
     private final int LAVA_SLOT = 2;
-    private final int INGREDIENT_TYPE_SLOT = 3;
-    private final int OUTPUT_TYPE_SLOT = 4;
+    private final int INGOT_SLOT = 3;
+    private final int PATTERN_SLOT = 4;
 
 
     protected final PropertyDelegate propertyDelegate;
@@ -66,6 +65,14 @@ public class MoneyGeneratorBlockEntity extends BlockEntity implements ExtendedSc
 
     private int lava_volume = 0;
 
+    private Item[] bronze =
+            {ModItems.BRONZE_INGOT, ModItems.BRONZE_NUGGET, ModItems.BRONZE_CHESTPLATE, ModItems.BRONZE_BOOTS,
+                    ModItems.BRONZE_LEGGINGS, ModItems.BRONZE_HELMET, ModItems.BRONZE_AXE, ModItems.BRONZE_COIN,
+                    ModItems.BRONZE_HOE, ModItems.BRONZE_PICKAXE, ModItems.BRONZE_SHOVEL, ModItems.BRONZE_SWORD,
+
+                    ModBlocks.BRONZE_BLOCK.asItem(), ModBlocks.BRONZE_SLAB.asItem(), ModBlocks.BRONZE_STAIRS.asItem(),
+                    ModBlocks.BRONZE_WALL.asItem(), ModBlocks.BRONZE_FENCE.asItem(), ModBlocks.BRONZE_FENCE_GATE.asItem(),
+                    ModBlocks.BRONZE_DOOR.asItem(), ModBlocks.BRONZE_TRAPDOOR.asItem() };
 
     public MoneyGeneratorBlockEntity(BlockPos pos, BlockState state) {
         super(ModBlockEntities.MONEY_GENERATOR_BE, pos, state);
@@ -136,7 +143,6 @@ public class MoneyGeneratorBlockEntity extends BlockEntity implements ExtendedSc
         nbt.putInt("money_generator.lava_volume", lava_volume);
         nbt.putInt("money_generator.craft_progress", craft_progress);
         nbt.putInt("money_generator.max_craft_progress", max_craft_progress);
-        nbt.putInt("money_generator.quantity_decrement", silver_quantity_decrement);
         nbt.putInt("money_generator.br_q_stocked", bronze_quantity_stocked);
     }
 
@@ -149,7 +155,6 @@ public class MoneyGeneratorBlockEntity extends BlockEntity implements ExtendedSc
         lava_volume = nbt.getInt("money_generator.lava_volume");
         craft_progress = nbt.getInt("money_generator.craft_progress");
         max_craft_progress = nbt.getInt("money_generator.max_craft_progress");
-        silver_quantity_decrement = nbt.getInt("money_generator.quantity_decrement");
         bronze_quantity_stocked = nbt.getInt("money_generator.br_q_stocked");
 
         super.readNbt(nbt, registryLookup);
@@ -194,29 +199,23 @@ public class MoneyGeneratorBlockEntity extends BlockEntity implements ExtendedSc
         }
     }
 
-
     private boolean hasCraftRecipe() {
-        if (this.getStack(OUTPUT_TYPE_SLOT).getItem() == ModItems.COIN_PATTERN) {
 
-            if (this.getStack(INGREDIENT_TYPE_SLOT).getItem() == ModItems.BRONZE_INGOT) {
-                this.bronze_quantity_decrement = 1;
-                return true;
-            }else if (this.getStack(INGREDIENT_TYPE_SLOT).getItem() == ModItems.SILVER_INGOT){
-                this.silver_quantity_decrement = 1;
-                return true;
-            }
+        Optional<RecipeEntry<MoneyGeneratorCraftRecipe>> recipe = getCurrentCraftRecipe();
 
-        }else if (this.getStack(OUTPUT_TYPE_SLOT).getItem() == ModItems.INGOT_PATTERN){
-
-            if (this.getStack(INGREDIENT_TYPE_SLOT).getItem() == ModItems.BRONZE_INGOT) {
-                this.bronze_quantity_decrement = 11;
-                return true;
-            }else if (this.getStack(INGREDIENT_TYPE_SLOT).getItem() == ModItems.SILVER_INGOT){
-                this.silver_quantity_decrement = 11;
-                return true;
-            }
+        if (recipe.isEmpty()){
+            return false;
         }
-        return false;
+
+        int quantity_required = recipe.get().value().quantity_required();
+
+        if (this.getStack(INGOT_SLOT).getItem() == ModItems.BRONZE_INGOT){
+            this.bronze_quantity_decrement = quantity_required;
+        }else {
+            this.silver_quantity_decrement = quantity_required;
+        }
+
+        return true;
     }
 
     private void resetCraftingProgress() {
@@ -225,28 +224,11 @@ public class MoneyGeneratorBlockEntity extends BlockEntity implements ExtendedSc
 
     private boolean canCraft() {
 
-        ItemStack output = null;
+        Optional<RecipeEntry<MoneyGeneratorCraftRecipe>> recipe = getCurrentCraftRecipe();
 
-        if (this.getStack(OUTPUT_TYPE_SLOT).getItem() == ModItems.COIN_PATTERN) {
+        ItemStack output = recipe.get().value().output();
 
-            if (this.getStack(INGREDIENT_TYPE_SLOT).getItem() == ModItems.BRONZE_INGOT) {
-                output = ModItems.BRONZE_COIN.getDefaultStack();
 
-            }else if (this.getStack(INGREDIENT_TYPE_SLOT).getItem() == ModItems.SILVER_INGOT){
-                output = ModItems.SILVER_COIN.getDefaultStack();
-
-            }
-
-        }else if (this.getStack(OUTPUT_TYPE_SLOT).getItem() == ModItems.INGOT_PATTERN){
-
-            if (this.getStack(INGREDIENT_TYPE_SLOT).getItem() == ModItems.BRONZE_INGOT) {
-                output = ModItems.BRONZE_INGOT.getDefaultStack();
-
-            }else if (this.getStack(INGREDIENT_TYPE_SLOT).getItem() == ModItems.SILVER_INGOT){
-                output = ModItems.SILVER_INGOT.getDefaultStack();
-
-            }
-        }
         return canInsertAmountIntoOutputSlot(1, output.getItem().getMaxCount()) && canInsertItemIntoOutputSlot(output);
     }
 
@@ -262,34 +244,24 @@ public class MoneyGeneratorBlockEntity extends BlockEntity implements ExtendedSc
     }
 
     private void craftItem() {
-    ItemStack output = null;
-        if (this.getStack(OUTPUT_TYPE_SLOT).getItem() == ModItems.COIN_PATTERN) {
+        Optional<RecipeEntry<MoneyGeneratorCraftRecipe>> recipe = getCurrentCraftRecipe();
 
-            if (this.getStack(INGREDIENT_TYPE_SLOT).getItem() == ModItems.BRONZE_INGOT) {
-                output = new ItemStack(ModItems.BRONZE_COIN);
-                this.bronze_quantity_stocked = this.bronze_quantity_stocked - bronze_quantity_decrement;
-            }else if (this.getStack(INGREDIENT_TYPE_SLOT).getItem() == ModItems.SILVER_INGOT){
-                output = new ItemStack(ModItems.SILVER_COIN);
-                this.silver_quantity_stocked = this.silver_quantity_stocked - silver_quantity_decrement;
-            }
+        ItemStack output = recipe.get().value().output();
 
-        }else if (this.getStack(OUTPUT_TYPE_SLOT).getItem() == ModItems.INGOT_PATTERN){
-
-            if (this.getStack(INGREDIENT_TYPE_SLOT).getItem() == ModItems.BRONZE_INGOT) {
-                output = new ItemStack(ModItems.BRONZE_INGOT);
-                this.bronze_quantity_stocked = this.bronze_quantity_stocked - bronze_quantity_decrement;
-            }else if (this.getStack(INGREDIENT_TYPE_SLOT).getItem() == ModItems.SILVER_INGOT){
-                output = new ItemStack(ModItems.SILVER_INGOT);
-                this.silver_quantity_stocked = this.silver_quantity_stocked - silver_quantity_decrement;
-            }
+        if (this.getStack(INGOT_SLOT).getItem() == ModItems.BRONZE_INGOT){
+            this.bronze_quantity_stocked = this.bronze_quantity_stocked - bronze_quantity_decrement;
+        }else{
+            this.silver_quantity_stocked = this.silver_quantity_stocked - silver_quantity_decrement;
         }
+
         this.setStack(OUTPUT_SLOT, new ItemStack(output.getItem(),
                 this.getStack(OUTPUT_SLOT).getCount() + output.getCount()));
+
         this.lava_volume += -1;
     }
 
     private boolean hasEnoughQuantity() {
-        if (this.getStack(INGREDIENT_TYPE_SLOT).getItem() == ModItems.SILVER_INGOT){
+        if (this.getStack(INGOT_SLOT).getItem() == ModItems.SILVER_INGOT){
             return this.silver_quantity_stocked >= this.silver_quantity_decrement;
         }else {
             return this.bronze_quantity_stocked >= this.bronze_quantity_decrement;
@@ -312,16 +284,15 @@ public class MoneyGeneratorBlockEntity extends BlockEntity implements ExtendedSc
     private void smeltItem() {
 
         Optional<RecipeEntry<MoneyGeneratorRecipe>> recipe = getCurrentRecipe();
-        Item inputType = recipe.get().value().output().getItem();
+
+        this.bronze_quantity_stocked += bronze_quantity_add;
+        this.silver_quantity_stocked += silver_quantity_add;
 
         this.removeStack(INPUT_SLOT, 1);
-
-        if (inputType == ModItems.BRONZE_NUGGET){
-            this.bronze_quantity_stocked += bronze_quantity_add;
-        }else{
-        this.silver_quantity_stocked += silver_quantity_add;
-        }
         this.lava_volume += -1;
+
+        this.bronze_quantity_add = 0;
+        this.silver_quantity_add = 0;
     }
 
     private void resetSmeltingProgress() {
@@ -344,30 +315,43 @@ public class MoneyGeneratorBlockEntity extends BlockEntity implements ExtendedSc
             return false;
         }
 
-        ItemStack output = recipe.get().value().output();
+        ItemStack input = getStack(INPUT_SLOT);
+        int output = recipe.get().value().output();
 
-        if (output.getItem() == ModItems.BRONZE_NUGGET){
-            this.bronze_quantity_add = output.getCount();
-            return canAddBronzeQuantityInStock() && hasLava();
-        }else {
-            this.silver_quantity_add = output.getCount();
-            return canAddSilverQuantityInStock() && hasLava();
+        int i =0 ;
+        while (input.getItem() != bronze[i]){
+            i += 1;
+            if (i >= bronze.length){
+                this.silver_quantity_add = output;
+                return canAddSilverQuantityInStock() && hasLava();
+            }
         }
+        this.bronze_quantity_add = output;
+        return canAddBronzeQuantityInStock() && hasLava();
     }
 
     private Optional<RecipeEntry<MoneyGeneratorRecipe>> getCurrentRecipe() {
-        ItemStack stack = inventory.get(INPUT_SLOT);
+        return this.getWorld().getRecipeManager()
+                .getFirstMatch(ModRecipes.MONEY_GENERATOR_TYPE, new MoneyGeneratorRecipeInput(inventory.get(INPUT_SLOT)), this.getWorld());
+    }
 
-        return this.getWorld().getRecipeManager().getFirstMatch(ModRecipes.MONEY_GENERATOR_TYPE,
-                new MoneyGeneratorRecipeInput(inventory.get(INPUT_SLOT)), this.getWorld());
+    private Optional<RecipeEntry<MoneyGeneratorCraftRecipe>> getCurrentCraftRecipe() {
+        return this.getWorld().getRecipeManager()
+                .getFirstMatch(ModRecipes.MONEY_GENERATOR_CRAFT_TYPE, new MoneyGeneratorCraftRecipeInput(
+                        inventory.get(INPUT_SLOT),
+                        inventory.get(OUTPUT_SLOT),
+                        inventory.get(LAVA_SLOT),
+                        inventory.get(INGOT_SLOT),
+                        inventory.get(PATTERN_SLOT)
+                ), this.getWorld());
     }
 
     private boolean canAddSilverQuantityInStock() {
-        return this.silver_quantity_stocked + this.silver_quantity_add <= 10_000;
+        return this.silver_quantity_stocked + this.silver_quantity_add <= 100_000;
     }
 
     private boolean canAddBronzeQuantityInStock() {
-        return this.bronze_quantity_stocked + this.bronze_quantity_add <= 10_000;
+        return this.bronze_quantity_stocked + this.bronze_quantity_add <= 100_000;
     }
 
     private boolean hasLava(){

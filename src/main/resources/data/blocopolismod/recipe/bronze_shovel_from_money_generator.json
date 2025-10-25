@@ -3,8 +3,5 @@
   "ingredient": {
     "item": "blocopolismod:bronze_shovel"
   },
-  "result": {
-    "count": 5,
-    "id": "blocopolismod:bronze_nugget"
-  }
+  "result": 50
 }

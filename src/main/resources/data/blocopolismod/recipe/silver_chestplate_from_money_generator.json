@@ -3,8 +3,5 @@
   "ingredient": {
     "item": "blocopolismod:silver_chestplate"
   },
-  "result": {
-    "count": 40,
-    "id": "blocopolismod:silver_nugget"
-  }
+  "result": 400
 }

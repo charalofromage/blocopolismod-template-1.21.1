@@ -3,6 +3,7 @@ package net.charalofromage.blocopolismod.item;
 import net.charalofromage.blocopolismod.BlocopolisMod;
 import net.charalofromage.blocopolismod.block.ModBlocks;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
+import net.minecraft.data.client.Models;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.registry.Registries;
@@ -106,6 +107,12 @@ public static final ItemGroup BLOCOPOLIS_ITEMS = Registry.register(Registries.IT
                     entries.add(ModItems.RANDOM_SPAWNER);
                     entries.add(ModItems.COIN_PATTERN);
                     entries.add(ModItems.BRONZE_COIN);
+                    entries.add(ModItems.BRONZE_COIN_1_000_000);
+                    entries.add(ModItems.BRONZE_COIN_10_000);
+                    entries.add(ModItems.BRONZE_COIN_100);
+                    entries.add(ModItems.SILVER_COIN_100);
+                    entries.add(ModItems.SILVER_COIN_1_000_000);
+                    entries.add(ModItems.SILVER_COIN_10_000);
                     entries.add(ModItems.SILVER_COIN);
                     entries.add(ModItems.INGOT_PATTERN);
 
@@ -134,6 +141,26 @@ public static final ItemGroup BLOCOPOLIS_ITEMS = Registry.register(Registries.IT
 
                     entries.add(ModItems.APHRODITE_SHELLS);
 
+                    entries.add(ModItems.BRONZE_AXE_HEAD);
+                    entries.add(ModItems.BRONZE_HOE_HEAD);
+                    entries.add(ModItems.BRONZE_PICKAXE_HEAD);
+                    entries.add(ModItems.BRONZE_SHOVEL_HEAD);
+                    entries.add(ModItems.BRONZE_SWORD_HEAD);
+                    entries.add(ModItems.SILVER_HOE_HEAD);
+                    entries.add(ModItems.SILVER_AXE_HEAD);
+                    entries.add(ModItems.SILVER_SHOVEL_HEAD);
+                    entries.add(ModItems.SILVER_SWORD_HEAD);
+                    entries.add(ModItems.SILVER_PICKAXE_HEAD);
+                    entries.add(ModItems.PICKAXE_PATTERN);
+                    entries.add(ModItems.AXE_PATTERN);
+                    entries.add(ModItems.BOOTS_PATTERN);
+                    entries.add(ModItems.HOE_PATTERN);
+                    entries.add(ModItems.SWORD_PATTERN);
+                    entries.add(ModItems.HELMET_PATTERN);
+                    entries.add(ModItems.CHESTPLATE_PATTERN);
+                    entries.add(ModItems.SHOVEL_PATTERN);
+                    entries.add(ModItems.LEGGINGS_PATTERN);
+
                     entries.add(ModBlocks.SILVER_CHEST);
                     entries.add(ModBlocks.BRONZE_CHEST);
                     entries.add(ModBlocks.LEAD_CHEST);
@@ -156,6 +183,7 @@ public static final ItemGroup BLOCOPOLIS_ITEMS = Registry.register(Registries.IT
                     entries.add(ModBlocks.MONEY_GENERATOR);
 
                     entries.add(ModItems.SNAKE_SPAWN_EGG);
+
                 })
                 .build());
 

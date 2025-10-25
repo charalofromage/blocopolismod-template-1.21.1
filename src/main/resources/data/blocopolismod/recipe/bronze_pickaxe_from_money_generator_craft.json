@@ -1,0 +1,14 @@
+{
+  "type": "blocopolismod:money_generator_craft",
+
+  "quantity_required": 336,
+  "ingot": {
+    "item": "blocopolismod:bronze_ingot"
+  },
+  "pattern": {
+    "item": "blocopolismod:pickaxe_pattern"
+  },
+  "result": {
+    "id": "blocopolismod:bronze_pickaxe_head"
+  }
+}

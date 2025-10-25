@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "blocopolismod:silver_stick"
+    },
+    {
+      "item": "blocopolismod:silver_shovel_head"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "blocopolismod:silver_shovel"
+  }
+}

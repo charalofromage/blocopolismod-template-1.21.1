@@ -1,12 +1,17 @@
 package net.charalofromage.blocopolismod.screen.custom;
 
+import dev.architectury.platform.Mod;
 import net.charalofromage.blocopolismod.block.entity.custom.MoneyGeneratorBlockEntity;
+import net.charalofromage.blocopolismod.item.ModItems;
 import net.charalofromage.blocopolismod.screen.ModScreenHandlers;
+import net.charalofromage.blocopolismod.screen.slot.RestrictedSlot;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.inventory.Inventory;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.Items;
 import net.minecraft.screen.*;
 import net.minecraft.screen.slot.Slot;
 import net.minecraft.util.math.BlockPos;
@@ -29,9 +34,15 @@ public MoneyGeneratorScreenHandler(int syncId, PlayerInventory playerInventory, 
 
     this.addSlot(new Slot(inventory, 0, 26, 54));
     this.addSlot(new Slot(inventory, 1, 26, 126));
-    this.addSlot(new Slot(inventory, 2, 144, 150));
-    this.addSlot(new Slot(inventory, 3, 8, 18));
-    this.addSlot(new Slot(inventory, 4, 26, 108));
+    this.addSlot(new RestrictedSlot(inventory, 2, 144, 150,
+            new Item[]{Items.LAVA_BUCKET}, 1));
+    this.addSlot(new RestrictedSlot(inventory, 3, 8, 18,
+            new Item[]{ModItems.BRONZE_INGOT, ModItems.SILVER_INGOT}, 1));
+    this.addSlot(new RestrictedSlot(inventory, 4, 26, 108,
+            new Item[]{ModItems.INGOT_PATTERN, ModItems.COIN_PATTERN, ModItems.AXE_PATTERN, ModItems.PICKAXE_PATTERN,
+                    ModItems.BOOTS_PATTERN, ModItems.HELMET_PATTERN, ModItems.HOE_PATTERN, ModItems.CHESTPLATE_PATTERN,
+                    ModItems.SWORD_PATTERN, ModItems.LEGGINGS_PATTERN},
+            1));
 
     addPlayerInventory(playerInventory);
     addPlayerHotbar(playerInventory);
@@ -68,7 +79,7 @@ public int getScaleSecondArrowProgress(){
 
 public int getScaleSilverBarreProgress(){
     int progress = this.propertyDelegate.get(2);
-    int maxProgress = 10_000;
+    int maxProgress = 100_000;
     int arrowPixelSize = 81;
 
     return maxProgress != 0 && progress != 0 ? progress * arrowPixelSize/maxProgress : 0 ;
@@ -76,7 +87,7 @@ public int getScaleSilverBarreProgress(){
 
 public int getScaleBronzeBarreProgress(){
     int progress = this.propertyDelegate.get(6);
-    int maxProgress = 10_000;
+    int maxProgress = 100_000;
     int arrowPixelSize = 81;
 
     return maxProgress != 0 && progress != 0 ? progress * arrowPixelSize/maxProgress : 0 ;

@@ -1,0 +1,43 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_bronze_pickaxe_head": {
+      "conditions": {
+        "items": [
+          {
+            "items": "blocopolismod:bronze_pickaxe_head"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_bronze_stick": {
+      "conditions": {
+        "items": [
+          {
+            "items": "blocopolismod:bronze_stick"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:bronze_pickaxe_from_head"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_bronze_stick",
+      "has_bronze_pickaxe_head"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:bronze_pickaxe_from_head"
+    ]
+  }
+}

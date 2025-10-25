@@ -3,8 +3,5 @@
   "ingredient": {
     "item": "blocopolismod:silver_leggings"
   },
-  "result": {
-    "count": 35,
-    "id": "blocopolismod:silver_nugget"
-  }
+  "result": 350
 }

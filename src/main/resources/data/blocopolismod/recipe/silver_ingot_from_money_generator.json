@@ -3,8 +3,5 @@
   "ingredient": {
     "item": "blocopolismod:silver_ingot"
   },
-  "result": {
-    "count": 10,
-    "id": "blocopolismod:silver_nugget"
-  }
+  "result": 100
 }

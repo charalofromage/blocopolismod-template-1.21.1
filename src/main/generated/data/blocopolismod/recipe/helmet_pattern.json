@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "D": {
+      "item": "minecraft:diamond"
+    },
+    "N": {
+      "item": "blocopolismod:lead_helmet"
+    }
+  },
+  "pattern": [
+    "DDD",
+    "DND",
+    "DDD"
+  ],
+  "result": {
+    "count": 1,
+    "id": "blocopolismod:helmet_pattern"
+  }
+}

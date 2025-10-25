@@ -8,7 +8,6 @@ import net.charalofromage.blocopolismod.item.ModItemGroups;
 import net.charalofromage.blocopolismod.item.ModItems;
 import net.charalofromage.blocopolismod.recipe.ModRecipes;
 import net.charalofromage.blocopolismod.screen.ModScreenHandlers;
-import net.charalofromage.blocopolismod.screen.custom.SilverChestScreen;
 import net.charalofromage.blocopolismod.util.TickScheduler;
 import net.charalofromage.blocopolismod.world.gen.ModWorldGeneration;
 import net.fabricmc.api.ModInitializer;
@@ -16,8 +15,11 @@ import net.fabricmc.api.ModInitializer;
 
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
-import net.minecraft.client.gui.screen.ingame.HandledScreens;
+import net.fabricmc.fabric.api.object.builder.v1.trade.TradeOfferHelper;
+import net.minecraft.item.ItemStack;
 import net.minecraft.server.world.ServerWorld;
+import net.minecraft.village.TradeOffer;
+import net.minecraft.village.TradedItem;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

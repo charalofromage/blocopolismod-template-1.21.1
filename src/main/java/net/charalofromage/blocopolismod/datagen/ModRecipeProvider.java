@@ -305,15 +305,6 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         offerStonecuttingRecipe(recipeExporter, RecipeCategory.DECORATIONS, ModBlocks.LEAD_FENCE_GATE, ModBlocks.LEAD_BLOCK, 1);
         offerStonecuttingRecipe(recipeExporter, RecipeCategory.DECORATIONS, ModBlocks.LEAD_WALL, ModBlocks.LEAD_BLOCK, 1);
 
-        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.SILVER_HOE, 1)
-                .pattern(" SS")
-                .pattern(" T ")
-                .pattern(" T ")
-                .input('T', Items.STICK)
-                .input('S', ModItems.SILVER_INGOT)
-                .criterion(hasItem(ModItems.SILVER_INGOT), conditionsFromItem(ModItems.SILVER_INGOT))
-                .criterion(hasItem(Items.STICK), conditionsFromItem(Items.STICK)).offerTo(recipeExporter);
-
         ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.LEAD_HOE, 1)
                 .pattern(" SS")
                 .pattern(" T ")
@@ -330,42 +321,6 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .input('T', Items.STICK)
                 .input('S', ModItems.BRONZE_INGOT)
                 .criterion(hasItem(ModItems.BRONZE_INGOT), conditionsFromItem(ModItems.BRONZE_INGOT))
-                .criterion(hasItem(Items.STICK), conditionsFromItem(Items.STICK)).offerTo(recipeExporter);
-
-                ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.SILVER_PICKAXE, 1)
-                .pattern("SSS")
-                .pattern(" T ")
-                .pattern(" T ")
-                .input('T', Items.STICK)
-                .input('S', ModItems.SILVER_INGOT)
-                .criterion(hasItem(ModItems.SILVER_INGOT), conditionsFromItem(ModItems.SILVER_INGOT))
-                .criterion(hasItem(Items.STICK), conditionsFromItem(Items.STICK)).offerTo(recipeExporter);
-
-               ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.SILVER_AXE, 1)
-                .pattern(" SS")
-                .pattern(" TS")
-                .pattern(" T ")
-                .input('T', Items.STICK)
-                .input('S', ModItems.SILVER_INGOT)
-                .criterion(hasItem(ModItems.SILVER_INGOT), conditionsFromItem(ModItems.SILVER_INGOT))
-                .criterion(hasItem(Items.STICK), conditionsFromItem(Items.STICK)).offerTo(recipeExporter);
-
-               ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.SILVER_SHOVEL, 1)
-                .pattern(" S ")
-                .pattern(" T ")
-                .pattern(" T ")
-                .input('T', Items.STICK)
-                .input('S', ModItems.SILVER_INGOT)
-                .criterion(hasItem(ModItems.SILVER_INGOT), conditionsFromItem(ModItems.SILVER_INGOT))
-                .criterion(hasItem(Items.STICK), conditionsFromItem(Items.STICK)).offerTo(recipeExporter);
-
-               ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.SILVER_SWORD, 1)
-                .pattern(" S ")
-                .pattern(" S ")
-                .pattern(" T ")
-                .input('T', Items.STICK)
-                .input('S', ModItems.SILVER_INGOT)
-                .criterion(hasItem(ModItems.SILVER_INGOT), conditionsFromItem(ModItems.SILVER_INGOT))
                 .criterion(hasItem(Items.STICK), conditionsFromItem(Items.STICK)).offerTo(recipeExporter);
 
                ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.BRONZE_PICKAXE, 1)
@@ -583,6 +538,87 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(ModItems.LEAD_INGOT), conditionsFromItem(ModItems.LEAD_INGOT))
                 .criterion(hasItem(Items.DIAMOND), conditionsFromItem(Items.DIAMOND)).
                 offerTo(recipeExporter);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.SHOVEL_PATTERN, 1)
+                .pattern("DDD")
+                .pattern("DND")
+                .pattern("DDD")
+                .input('D', Items.DIAMOND)
+                .input('N', ModItems.LEAD_SHOVEL)
+                .criterion(hasItem(ModItems.LEAD_SHOVEL), conditionsFromItem(ModItems.LEAD_SHOVEL))
+                .criterion(hasItem(Items.DIAMOND), conditionsFromItem(Items.DIAMOND)).
+                offerTo(recipeExporter);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.AXE_PATTERN, 1)
+                .pattern("DDD")
+                .pattern("DND")
+                .pattern("DDD")
+                .input('D', Items.DIAMOND)
+                .input('N', ModItems.LEAD_AXE)
+                .criterion(hasItem(ModItems.LEAD_AXE), conditionsFromItem(ModItems.LEAD_AXE))
+                .criterion(hasItem(Items.DIAMOND), conditionsFromItem(Items.DIAMOND)).
+                offerTo(recipeExporter);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.PICKAXE_PATTERN, 1)
+                .pattern("DDD")
+                .pattern("DND")
+                .pattern("DDD")
+                .input('D', Items.DIAMOND)
+                .input('N', ModItems.LEAD_PICKAXE)
+                .criterion(hasItem(ModItems.LEAD_PICKAXE), conditionsFromItem(ModItems.LEAD_PICKAXE))
+                .criterion(hasItem(Items.DIAMOND), conditionsFromItem(Items.DIAMOND)).
+                offerTo(recipeExporter);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.SWORD_PATTERN, 1)
+                .pattern("DDD")
+                .pattern("DND")
+                .pattern("DDD")
+                .input('D', Items.DIAMOND)
+                .input('N', ModItems.LEAD_SWORD)
+                .criterion(hasItem(ModItems.LEAD_SWORD), conditionsFromItem(ModItems.LEAD_SWORD))
+                .criterion(hasItem(Items.DIAMOND), conditionsFromItem(Items.DIAMOND)).
+                offerTo(recipeExporter);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.HOE_PATTERN, 1)
+                .pattern("DDD")
+                .pattern("DND")
+                .pattern("DDD")
+                .input('D', Items.DIAMOND)
+                .input('N', ModItems.LEAD_HOE)
+                .criterion(hasItem(ModItems.LEAD_HOE), conditionsFromItem(ModItems.LEAD_HOE))
+                .criterion(hasItem(Items.DIAMOND), conditionsFromItem(Items.DIAMOND)).
+                offerTo(recipeExporter);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.HELMET_PATTERN, 1)
+                .pattern("DDD")
+                .pattern("DND")
+                .pattern("DDD")
+                .input('D', Items.DIAMOND)
+                .input('N', ModItems.LEAD_HELMET)
+                .criterion(hasItem(ModItems.LEAD_HELMET), conditionsFromItem(ModItems.LEAD_HELMET))
+                .criterion(hasItem(Items.DIAMOND), conditionsFromItem(Items.DIAMOND)).
+                offerTo(recipeExporter);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.CHESTPLATE_PATTERN, 1)
+                .pattern("DDD")
+                .pattern("DND")
+                .pattern("DDD")
+                .input('D', Items.DIAMOND)
+                .input('N', ModItems.LEAD_CHESTPLATE)
+                .criterion(hasItem(ModItems.LEAD_CHESTPLATE), conditionsFromItem(ModItems.LEAD_CHESTPLATE))
+                .criterion(hasItem(Items.DIAMOND), conditionsFromItem(Items.DIAMOND)).
+                offerTo(recipeExporter);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.LEGGINGS_PATTERN, 1)
+                .pattern("DDD")
+                .pattern("DND")
+                .pattern("DDD")
+                .input('D', Items.DIAMOND)
+                .input('N', ModItems.LEAD_LEGGINGS)
+                .criterion(hasItem(ModItems.LEAD_LEGGINGS), conditionsFromItem(ModItems.LEAD_LEGGINGS))
+                .criterion(hasItem(Items.DIAMOND), conditionsFromItem(Items.DIAMOND)).
+                offerTo(recipeExporter);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.BOOTS_PATTERN, 1)
+                .pattern("DDD")
+                .pattern("DND")
+                .pattern("DDD")
+                .input('D', Items.DIAMOND)
+                .input('N', ModItems.LEAD_BOOTS)
+                .criterion(hasItem(ModItems.LEAD_BOOTS), conditionsFromItem(ModItems.LEAD_BOOTS))
+                .criterion(hasItem(Items.DIAMOND), conditionsFromItem(Items.DIAMOND)).
+                offerTo(recipeExporter);
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.HADES_WEAPON)
                 .input(ModItems.HADES_WEAPON)
@@ -590,6 +626,78 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(ModItems.HADES_WEAPON), conditionsFromItem(ModItems.HADES_WEAPON))
                 .criterion(hasItem(ModItems.PIECE_OF_BLADE_OF_HADES), conditionsFromItem(ModItems.PIECE_OF_BLADE_OF_HADES))
                 .offerTo(recipeExporter, getRecipeName(ModItems.HADES_WEAPON)+ "_repair");
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.SILVER_SWORD)
+                .input(ModItems.SILVER_STICK)
+                .input(ModItems.SILVER_SWORD_HEAD)
+                .criterion(hasItem(ModItems.SILVER_STICK), conditionsFromItem(ModItems.SILVER_STICK))
+                .criterion(hasItem(ModItems.SILVER_SWORD_HEAD), conditionsFromItem(ModItems.SILVER_SWORD_HEAD))
+                .offerTo(recipeExporter, getRecipeName(ModItems.SILVER_SWORD) + "_from_head");
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.SILVER_HOE)
+                .input(ModItems.SILVER_STICK)
+                .input(ModItems.SILVER_HOE_HEAD)
+                .criterion(hasItem(ModItems.SILVER_STICK), conditionsFromItem(ModItems.SILVER_STICK))
+                .criterion(hasItem(ModItems.SILVER_HOE_HEAD), conditionsFromItem(ModItems.SILVER_HOE_HEAD))
+                .offerTo(recipeExporter, getRecipeName(ModItems.SILVER_HOE) + "_from_head");
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.SILVER_PICKAXE)
+                .input(ModItems.SILVER_STICK)
+                .input(ModItems.SILVER_PICKAXE_HEAD)
+                .criterion(hasItem(ModItems.SILVER_STICK), conditionsFromItem(ModItems.SILVER_STICK))
+                .criterion(hasItem(ModItems.SILVER_PICKAXE_HEAD), conditionsFromItem(ModItems.SILVER_PICKAXE_HEAD))
+                .offerTo(recipeExporter, getRecipeName(ModItems.SILVER_PICKAXE) + "_from_head");
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.SILVER_AXE)
+                .input(ModItems.SILVER_STICK)
+                .input(ModItems.SILVER_AXE_HEAD)
+                .criterion(hasItem(ModItems.SILVER_STICK), conditionsFromItem(ModItems.SILVER_STICK))
+                .criterion(hasItem(ModItems.SILVER_AXE_HEAD), conditionsFromItem(ModItems.SILVER_AXE_HEAD))
+                .offerTo(recipeExporter, getRecipeName(ModItems.SILVER_AXE) + "_from_head");
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.SILVER_SHOVEL)
+                .input(ModItems.SILVER_STICK)
+                .input(ModItems.SILVER_SHOVEL_HEAD)
+                .criterion(hasItem(ModItems.SILVER_STICK), conditionsFromItem(ModItems.SILVER_STICK))
+                .criterion(hasItem(ModItems.SILVER_SHOVEL_HEAD), conditionsFromItem(ModItems.SILVER_SHOVEL_HEAD))
+                .offerTo(recipeExporter, getRecipeName(ModItems.SILVER_SHOVEL) + "_from_head");
+
+
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.BRONZE_SWORD)
+                .input(ModItems.BRONZE_STICK)
+                .input(ModItems.BRONZE_SWORD_HEAD)
+                .criterion(hasItem(ModItems.BRONZE_STICK), conditionsFromItem(ModItems.BRONZE_STICK))
+                .criterion(hasItem(ModItems.BRONZE_SWORD_HEAD), conditionsFromItem(ModItems.BRONZE_SWORD_HEAD))
+                .offerTo(recipeExporter, getRecipeName(ModItems.BRONZE_SWORD) + "_from_head");
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.BRONZE_HOE)
+                .input(ModItems.BRONZE_STICK)
+                .input(ModItems.BRONZE_HOE_HEAD)
+                .criterion(hasItem(ModItems.BRONZE_STICK), conditionsFromItem(ModItems.BRONZE_STICK))
+                .criterion(hasItem(ModItems.BRONZE_HOE_HEAD), conditionsFromItem(ModItems.BRONZE_HOE_HEAD))
+                .offerTo(recipeExporter, getRecipeName(ModItems.BRONZE_HOE) + "_from_head");
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.BRONZE_PICKAXE)
+                .input(ModItems.BRONZE_STICK)
+                .input(ModItems.BRONZE_PICKAXE_HEAD)
+                .criterion(hasItem(ModItems.BRONZE_STICK), conditionsFromItem(ModItems.BRONZE_STICK))
+                .criterion(hasItem(ModItems.BRONZE_PICKAXE_HEAD), conditionsFromItem(ModItems.BRONZE_PICKAXE_HEAD))
+                .offerTo(recipeExporter, getRecipeName(ModItems.BRONZE_PICKAXE) + "_from_head");
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.BRONZE_AXE)
+                .input(ModItems.BRONZE_STICK)
+                .input(ModItems.BRONZE_AXE_HEAD)
+                .criterion(hasItem(ModItems.BRONZE_STICK), conditionsFromItem(ModItems.BRONZE_STICK))
+                .criterion(hasItem(ModItems.BRONZE_AXE_HEAD), conditionsFromItem(ModItems.BRONZE_AXE_HEAD))
+                .offerTo(recipeExporter, getRecipeName(ModItems.BRONZE_AXE) + "_from_head");
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.BRONZE_SHOVEL)
+                .input(ModItems.BRONZE_STICK)
+                .input(ModItems.BRONZE_SHOVEL_HEAD)
+                .criterion(hasItem(ModItems.BRONZE_STICK), conditionsFromItem(ModItems.BRONZE_STICK))
+                .criterion(hasItem(ModItems.BRONZE_SHOVEL_HEAD), conditionsFromItem(ModItems.BRONZE_SHOVEL_HEAD))
+                .offerTo(recipeExporter, getRecipeName(ModItems.BRONZE_SHOVEL) + "_from_head");
 
     }
 

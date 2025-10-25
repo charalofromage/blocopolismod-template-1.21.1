@@ -163,7 +163,7 @@ public class ModBlocks {
 public static final Block MONEY_GENERATOR = registerBlock("money_generator",
         new MoneyGenerator(AbstractBlock.Settings.create()));
 
-    private static Block registerBlock(String name, Block block){
+private static Block registerBlock(String name, Block block){
         registerBlockItem(name, block);
         return Registry.register(Registries.BLOCK, Identifier.of(BlocopolisMod.MOD_ID, name), block);
     }

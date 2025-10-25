@@ -41,8 +41,35 @@ public class ModItems {
     public static final Item SPAWNER_CREEPER_UPGRADE = registerItem("spawner_creeper_upgrade", new Item(new Item.Settings()));
     public static final Item COIN_PATTERN = registerItem("coin_pattern", new Item(new Item.Settings()));
     public static final Item SILVER_COIN = registerItem("silver_coin", new Item(new Item.Settings().maxCount(99)));
+    public static final Item SILVER_COIN_100 = registerItem("silver_coin_100", new Item(new Item.Settings().maxCount(99)));
+    public static final Item SILVER_COIN_10_000 = registerItem("silver_coin_10_000", new Item(new Item.Settings().maxCount(99)));
+    public static final Item SILVER_COIN_1_000_000 = registerItem("silver_coin_1_000_000", new Item(new Item.Settings().maxCount(99)));
     public static final Item BRONZE_COIN = registerItem("bronze_coin", new Item(new Item.Settings().maxCount(99)));
+    public static final Item BRONZE_COIN_100 = registerItem("bronze_coin_100", new Item(new Item.Settings().maxCount(99)));
+    public static final Item BRONZE_COIN_10_000 = registerItem("bronze_coin_10_000", new Item(new Item.Settings().maxCount(99)));
+    public static final Item BRONZE_COIN_1_000_000 = registerItem("bronze_coin_1_000_000", new Item(new Item.Settings().maxCount(99)));
     public static final Item INGOT_PATTERN = registerItem("ingot_pattern", new Item(new Item.Settings()));
+    public static final Item AXE_PATTERN = registerItem("axe_pattern", new Item(new Item.Settings()));
+    public static final Item PICKAXE_PATTERN = registerItem("pickaxe_pattern", new Item(new Item.Settings()));
+    public static final Item HOE_PATTERN = registerItem("hoe_pattern", new Item(new Item.Settings()));
+    public static final Item SWORD_PATTERN = registerItem("sword_pattern", new Item(new Item.Settings()));
+    public static final Item SHOVEL_PATTERN = registerItem("shovel_pattern", new Item(new Item.Settings()));
+    public static final Item CHESTPLATE_PATTERN = registerItem("chestplate_pattern", new Item(new Item.Settings()));
+    public static final Item HELMET_PATTERN = registerItem("helmet_pattern", new Item(new Item.Settings()));
+    public static final Item LEGGINGS_PATTERN = registerItem("leggings_pattern", new Item(new Item.Settings()));
+    public static final Item BOOTS_PATTERN = registerItem("boots_pattern", new Item(new Item.Settings()));
+
+    public static final Item SILVER_AXE_HEAD = registerItem("silver_axe_head", new Item(new Item.Settings()));
+    public static final Item SILVER_PICKAXE_HEAD = registerItem("silver_pickaxe_head", new Item(new Item.Settings()));
+    public static final Item SILVER_HOE_HEAD = registerItem("silver_hoe_head", new Item(new Item.Settings()));
+    public static final Item SILVER_SWORD_HEAD = registerItem("silver_sword_head", new Item(new Item.Settings()));
+    public static final Item SILVER_SHOVEL_HEAD = registerItem("silver_shovel_head", new Item(new Item.Settings()));
+
+    public static final Item BRONZE_AXE_HEAD = registerItem("bronze_axe_head", new Item(new Item.Settings()));
+    public static final Item BRONZE_PICKAXE_HEAD = registerItem("bronze_pickaxe_head", new Item(new Item.Settings()));
+    public static final Item BRONZE_HOE_HEAD = registerItem("bronze_hoe_head", new Item(new Item.Settings()));
+    public static final Item BRONZE_SWORD_HEAD = registerItem("bronze_sword_head", new Item(new Item.Settings()));
+    public static final Item BRONZE_SHOVEL_HEAD = registerItem("bronze_shovel_head", new Item(new Item.Settings()));
 
 
     public static final Item POSEIDON_WEAPON = registerItem("poseidon_weapon",
@@ -184,6 +211,9 @@ public static final Item HERMES_SHOOES = registerItem("hermes_shooes", new Herme
 
 public static final Item SNAKE_SPAWN_EGG = registerItem("snake_spawn_egg",
         new SpawnEggItem(ModEntities.SNAKE, 0x607D3B, 0xEEDC82, new Item.Settings()));
+
+
+
 
 
     private static Item registerItem(String name, Item item){

@@ -3,8 +3,5 @@
   "ingredient": {
     "item": "blocopolismod:silver_pickaxe"
   },
-  "result": {
-    "count": 15,
-    "id": "blocopolismod:silver_nugget"
-  }
+  "result": 150
 }

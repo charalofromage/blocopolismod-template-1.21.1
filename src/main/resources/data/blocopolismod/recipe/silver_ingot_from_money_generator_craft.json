@@ -1,0 +1,14 @@
+{
+  "type": "blocopolismod:money_generator_craft",
+
+  "quantity_required": 112,
+  "ingot": {
+    "item": "blocopolismod:silver_ingot"
+  },
+  "pattern": {
+    "item": "blocopolismod:ingot_pattern"
+  },
+  "result": {
+    "id": "blocopolismod:silver_ingot"
+  }
+}

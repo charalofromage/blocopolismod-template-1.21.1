@@ -71,7 +71,8 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.SPIDER_SPAWNERUP)
                 .add(ModBlocks.CREEPER_SPAWNER)
                 .add(ModBlocks.AUTOKILLERSPAWNER)
-                .add(ModBlocks.PIG_SPAWNERUP);
+                .add(ModBlocks.PIG_SPAWNERUP)
+                .add(ModBlocks.MONEY_GENERATOR);
 
         getOrCreateTagBuilder(BlockTags.NEEDS_DIAMOND_TOOL)
                 .add(ModBlocks.SILVER_BLOCK)
@@ -84,7 +85,8 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.SILVER_STAIRS)
                 .add(ModBlocks.SILVER_TRAPDOOR)
                 .add(ModBlocks.AUTOKILLERSPAWNER)
-                .add(ModBlocks.SILVER_WALL);
+                .add(ModBlocks.SILVER_WALL)
+                .add(ModBlocks.MONEY_GENERATOR);
 
         getOrCreateTagBuilder(BlockTags.NEEDS_IRON_TOOL)
                 .add(ModBlocks.BRONZE_BLOCK)

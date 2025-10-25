@@ -140,6 +140,31 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.INGOT_PATTERN, Models.GENERATED);
         itemModelGenerator.register(ModItems.BRONZE_COIN, Models.GENERATED);
         itemModelGenerator.register(ModItems.SILVER_COIN, Models.GENERATED);
+        itemModelGenerator.register(ModItems.SILVER_COIN_100, Models.GENERATED);
+        itemModelGenerator.register(ModItems.SILVER_COIN_10_000, Models.GENERATED);
+        itemModelGenerator.register(ModItems.SILVER_COIN_1_000_000, Models.GENERATED);
+        itemModelGenerator.register(ModItems.BRONZE_COIN_100, Models.GENERATED);
+        itemModelGenerator.register(ModItems.BRONZE_COIN_10_000, Models.GENERATED);
+        itemModelGenerator.register(ModItems.BRONZE_COIN_1_000_000, Models.GENERATED);
+        itemModelGenerator.register(ModItems.BRONZE_AXE_HEAD, Models.GENERATED);
+        itemModelGenerator.register(ModItems.BRONZE_HOE_HEAD, Models.GENERATED);
+        itemModelGenerator.register(ModItems.BRONZE_PICKAXE_HEAD, Models.GENERATED);
+        itemModelGenerator.register(ModItems.BRONZE_SHOVEL_HEAD, Models.GENERATED);
+        itemModelGenerator.register(ModItems.BRONZE_SWORD_HEAD, Models.GENERATED);
+        itemModelGenerator.register(ModItems.SILVER_HOE_HEAD, Models.GENERATED);
+        itemModelGenerator.register(ModItems.SILVER_AXE_HEAD, Models.GENERATED);
+        itemModelGenerator.register(ModItems.SILVER_SHOVEL_HEAD, Models.GENERATED);
+        itemModelGenerator.register(ModItems.SILVER_SWORD_HEAD, Models.GENERATED);
+        itemModelGenerator.register(ModItems.SILVER_PICKAXE_HEAD, Models.GENERATED);
+        itemModelGenerator.register(ModItems.PICKAXE_PATTERN, Models.GENERATED);
+        itemModelGenerator.register(ModItems.AXE_PATTERN, Models.GENERATED);
+        itemModelGenerator.register(ModItems.BOOTS_PATTERN, Models.GENERATED);
+        itemModelGenerator.register(ModItems.HOE_PATTERN, Models.GENERATED);
+        itemModelGenerator.register(ModItems.SWORD_PATTERN, Models.GENERATED);
+        itemModelGenerator.register(ModItems.HELMET_PATTERN, Models.GENERATED);
+        itemModelGenerator.register(ModItems.CHESTPLATE_PATTERN, Models.GENERATED);
+        itemModelGenerator.register(ModItems.SHOVEL_PATTERN, Models.GENERATED);
+        itemModelGenerator.register(ModItems.LEGGINGS_PATTERN, Models.GENERATED);
 
         itemModelGenerator.register(ModItems.SILVER_AXE, Models.HANDHELD);
         itemModelGenerator.register(ModItems.BRONZE_AXE, Models.HANDHELD);
@@ -178,6 +203,7 @@ public class ModModelProvider extends FabricModelProvider {
 
 
         itemModelGenerator.register(ModItems.SNAKE_SPAWN_EGG,
+
                 new Model(Optional.of(Identifier.of("item/template_spawn_egg")), Optional.empty()));
 
 

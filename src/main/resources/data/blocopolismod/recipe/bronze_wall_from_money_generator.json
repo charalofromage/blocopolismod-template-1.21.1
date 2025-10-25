@@ -1,0 +1,7 @@
+{
+  "type": "blocopolismod:money_generator",
+  "ingredient": {
+    "item": "blocopolismod:bronze_wall"
+  },
+  "result": 1000
+}

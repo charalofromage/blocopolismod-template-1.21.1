@@ -3,8 +3,5 @@
   "ingredient": {
     "item": "blocopolismod:bronze_nugget"
   },
-  "result": {
-    "count": 1,
-    "id": "blocopolismod:bronze_nugget"
-  }
+  "result": 10
 }

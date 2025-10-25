@@ -1,0 +1,7 @@
+{
+  "type": "blocopolismod:money_generator",
+  "ingredient": {
+    "item": "blocopolismod:silver_stairs"
+  },
+  "result": 1500
+}

@@ -64,11 +64,11 @@ public class MoneyGeneratorScreen extends HandledScreen<MoneyGeneratorScreenHand
 
         //Le Volume d'Argent
         int silverQuantityStocked = handler.getPropertyDelegate().get(2);
-        context.drawText(this.textRenderer, ( silverQuantityStocked/100.000) + "m³" , 134, 43, 12632256, false);
+        context.drawText(this.textRenderer, ( silverQuantityStocked/1000.00) + "m³" , 134, 43, 12632256, false);
 
         //Le Volume de Bronze
         int bronzeQuantityStocked = handler.getPropertyDelegate().get(6);
-        context.drawText(this.textRenderer, ( bronzeQuantityStocked/100.000) + "m³" , 134, 138, 9464378, false);
+        context.drawText(this.textRenderer, ( bronzeQuantityStocked/1000.00) + "m³" , 134, 138, 9464378, false);
 
         //Le Volume de lave
         int lavaVolume = handler.getPropertyDelegate().get(3);

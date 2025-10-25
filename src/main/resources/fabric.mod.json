@@ -23,6 +23,9 @@
 		],
 		"client": [
 			"net.charalofromage.blocopolismod.BlocopolisModClient"
+		],
+		"rei_client" : [
+			"net.charalofromage.blocopolismod.compat.BlocopolisModREIClient"
 		]
 	},
 	"mixins": [

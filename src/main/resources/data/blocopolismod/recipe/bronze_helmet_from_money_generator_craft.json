@@ -1,0 +1,14 @@
+{
+  "type": "blocopolismod:money_generator_craft",
+
+  "quantity_required": 560,
+  "ingot": {
+    "item": "blocopolismod:bronze_ingot"
+  },
+  "pattern": {
+    "item": "blocopolismod:helmet_pattern"
+  },
+  "result": {
+    "id": "blocopolismod:bronze_helmet"
+  }
+}
